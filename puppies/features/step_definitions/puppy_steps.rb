@@ -47,6 +47,29 @@ When(/^I select the additional products if needed$/) do
   @browser.checkbox(:id => 'vet').set
 end
 
+When(/^I select the additional products "([^"]*)" if needed$/) do |arg1|
+  if arg1.include? "collar"
+    @browser.checkbox(:id => 'collar').set
+  else
+    @browser.checkbox(:id => 'collar').clear
+  end
+  if arg1.include? "toy"
+    @browser.checkbox(:id => 'toy').set
+  else
+    @browser.checkbox(:id => 'toy').clear
+  end
+  if arg1.include? "carrier"
+    @browser.checkbox(:id => 'carrier').set
+  else
+    @browser.checkbox(:id => 'carrier').clear
+  end
+  if arg1.include? "vet"
+    @browser.checkbox(:id => 'vet').set
+  else
+    @browser.checkbox(:id => 'vet').clear
+  end
+end
+
 When(/^I do not enter the payment Details$/) do
   @browser.text_field(:id => 'order_name').set('')
   @browser.textarea(:id => 'order_address').set('')
@@ -117,6 +140,10 @@ end
 
 When(/^I click on next View Details to adopt a puppy$/) do
   @browser.button(:value => 'View Details', :index => 2).click
+end
+
+When(/^I click View Details "([^"]*)" to adopt a puppy$/) do |arg1|
+  @browser.button(:value => 'View Details', :index => arg1.to_i).click
 end
 
 When(/^I enter "([^"]*)" in Name Field$/) do |username|

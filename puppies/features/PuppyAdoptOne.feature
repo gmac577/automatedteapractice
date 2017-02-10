@@ -5,11 +5,11 @@ Feature: Puppy adoption agency Feature File
   I want a Puppy Adoption Feature
 
   Scenario Outline: Puppy Adoption site
-  Given: I am in Puppy adoption agency Page
+  Given I am in Puppy adoption agency Page
   When I can see the list of puppies available to adopt
-  And I click on View Details to adopt a puppy
+  And I click View Details "<index>" to adopt a puppy
   And I click on Adopt Me!
-  And I select the additional products if needed
+  And I select the additional products "<ad>" if needed
   And I click on Complete the Adoption button
   And I enter "<name>" in Name Field
   And I enter "<address>" in Address Field
@@ -19,8 +19,8 @@ Feature: Puppy adoption agency Feature File
   Then I get the Thank you message
 
   Examples:
-
-  | name    | address    | email           | paytype |
-  | Anitha   | 123 Mn St   | abc@dev.com  | Check     |
-  | Gordon   | 125 Sc St   | xyz@test.com | Credit card|
-  | Joe      | 123 Sc St   | xpz@test.com | Purchase order|
+  | name     | address     | email         | paytype        |index  |ad|
+  | Anitha   | 123 Mn St   | abc@dev.com   | Check          |1      |collar,toy,carrier,vet|
+  | joseph   | 123 Sc St   | abc1@devcom   | Credit card    |2      |carrier,toy|
+  | Gordon   | 125 Mn St   | abc4@dev.com  | Purchase order |0      |toy|
+  | Jeff     | 1297 Mn St  | abc3@dev.com  | Purchase order |3      |collar,vet,carrier|
