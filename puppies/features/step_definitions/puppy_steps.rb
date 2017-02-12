@@ -37,6 +37,7 @@ When(/^I click on Place Order$/) do
 end
 
 Then(/^I get the Thank you message$/) do
+  sleep 1
   @browser.text.include?('Thank you for').should == true
 end
 
@@ -160,4 +161,16 @@ end
 
 When(/^I enter "([^"]*)" in Pay type Field$/) do |paytype|
   @browser.select_list(:id => 'order_pay_type').select(paytype)
+end
+
+When(/^I click on next page "([^"]*)" to see more puppies available to adopt$/) do |n|
+  n.to_i.times do
+    @browser.link(:class => 'next_page').click
+  end
+end
+
+When(/^I click on previos page "([^"]*)" to see more puppies avaialbe to adopt$/) do |index|
+  index.to_i.times do
+    @browser.link(:class => 'previous_page').click
+  end
 end

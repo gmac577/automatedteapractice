@@ -4,8 +4,8 @@ This is a feature that enters in the Puppy adoption agency site and adopt puppie
 
 Scenario: Puppy adoption agency Page
 Given I am in Puppy adoption agency Page
-And I can see the list of puppies available to adopt
-When I click on next link to see the list of puppies to adopt
+When I can see the list of puppies available to adopt
+And I click on next link to see the list of puppies to adopt
 And I click on View Details to adopt a puppy
 And I click on Adopt Me!
 And I select the additional products if needed
