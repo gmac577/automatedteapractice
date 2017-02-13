@@ -174,3 +174,36 @@ When(/^I click on previos page "([^"]*)" to see more puppies avaialbe to adopt$/
     @browser.link(:class => 'previous_page').click
   end
 end
+
+When(/^I check whether the previous page link is disabled$/) do
+  p @browser.span(:class => 'previous_page disabled').present?
+end
+
+When(/^I click next page button twice$/) do
+  @browser.link(:class => 'next_page').click
+  @browser.link(:class => 'next_page').click
+end
+
+When(/^I check if the next page link is disabled$/) do
+  p @browser.span(:class => 'next_page disabled').present?
+end
+
+Then(/^I check previous page link is enabled$/) do
+  @browser.link(:class => 'previous_page').click
+end
+
+When(/^I click on Change Your mind button$/) do
+  @browser.button(:value=>'Change your mind').click
+end
+
+When(/^The pop up asks me Are you sure\?$/) do
+  @browser.alert.ok
+end
+
+When(/^I click on Ok$/) do
+  @browser.alert.ok
+end
+
+Then(/^I get the cart empty message$/) do
+  @browser.text.include?('Your car is currently empty').should == true
+end
