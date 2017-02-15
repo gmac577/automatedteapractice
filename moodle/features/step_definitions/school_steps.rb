@@ -15,7 +15,8 @@ When(/^I enter the "([^"]*)" in the password Field$/) do |password|
 end
 
 When(/^I click on login button$/) do
-  @browser.button(:id => 'loginbtn').click
+  @browser.button(:text => 'Log in').click
+  sleep 5
 end
 
 Then(/^"([^"]*)" are displayed$/) do |results|
@@ -23,9 +24,10 @@ Then(/^"([^"]*)" are displayed$/) do |results|
 end
 
 When(/^I clcik on Log in as guest button$/) do
-  @browser.button(:type => 'submit').click
+  @browser.button(:text => 'Log in as a guest').click
+  sleep 5
 end
 
 Then(/^guest access page will be displayed$/) do
-    @browser.text.include?('About Mount Orange').should == true
+    @browser.text.include?('You are currently using guest access').should == true
 end
