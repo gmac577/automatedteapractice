@@ -63,40 +63,48 @@ Then(/^It takes me to Menu Page$/) do
 end
 
 Given(/^I am in Passion Tea  Checkout Page$/) do
-  @browser.goto "http://www.practiceselenium.com/check-out.html"
+  #@browser.goto "http://www.practiceselenium.com/check-out.html"
+  visit(PassionCheckout)
 end
 
 Given(/^I enter "([^"]*)" in the checkout email field$/) do |id|
-@browser.text_field(:id => 'email').set(id)
+  #@browser.text_field(:id => 'email').set(id)
+  on(PassionCheckout).email = email
 end
 
 Given(/^I enter "([^"]*)" in the checkout name Field$/) do |username|
-  @browser.text_field(:id => 'name').set(username)
-
+  #@browser.text_field(:id => 'name').set(username)
+  on(PassionCheckout).name = name
 end
 
 Given(/^I enter "([^"]*)" in the checkout Address Field$/) do |address|
-  @browser.textarea(:id => 'address').set(address)
+  #@browser.textarea(:id => 'address').set(address)
+  on(PassionCheckout).address = address
 end
 
 Given(/^I enter "([^"]*)" in the checkout Card Type Field$/) do |visa|
- @browser.select_list(:id => "card_type").select(visa)
+ #@browser.select_list(:id => "card_type").select(visa)
+ on(PassionCheckout).cardtype = card_type
 end
 
 Given(/^I enter "([^"]*)" in the checkout Card Number Field$/) do |cardnumber|
-  @browser.text_field(:id => 'card_number').set(cardnumber)
+  #@browser.text_field(:id => 'card_number').set(cardnumber)
+  on(PassionCheckout).cardnumber = card_number
 end
 
 Given(/^I enter "([^"]*)" in the checkout CardHolder Name Field$/) do |cardholdername|
-  @browser.text_field(:id => 'cardholder_name').set(cardholdername)
+  #@browser.text_field(:id => 'cardholder_name').set(cardholdername)
+  on(PassionCheckout).cardholdername = cardholder_name
 end
 
 Given(/^I enter "([^"]*)" in the checkout Verification Code Field$/) do |verificationcode|
-  @browser.text_field(:id => 'verification_code').set(verificationcode)
+  #@browser.text_field(:id => 'verification_code').set(verificationcode)
+  on(PassionCheckout).verificationcode = verification_code
 end
 
 When(/^I click the PlaceOrder button$/) do
-  @browser.button(:text => 'Place Order').click
+  #@browser.button(:text => 'Place Order').click
+  on(PassionCheckout).Passion_Checkout_button
 end
 
 Then(/^It should successfully make the payment$/) do
