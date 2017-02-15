@@ -28,7 +28,8 @@ Then(/^"([^"]*)" are displayed$/) do |results|
 end
 
 When(/^I clcik on Log in as guest button$/) do
-  @browser.button(:text => 'Log in as a guest').click
+  #@browser.button(:text => 'Log in as a guest').click
+  on(LoginGuest).loginguest_button
   sleep 5
 end
 
