@@ -3,19 +3,23 @@ Given(/^I enter into the school site$/) do
 end
 
 When(/^I click in Log in link$/) do
-  @browser.link(:href =>'http://school.demo.moodle.net/login/index.php').click
+  #@browser.link(:href =>'http://school.demo.moodle.net/login/index.php').click
+  visit(LoginPage)
 end
 
 When(/^I enter the "([^"]*)" in the username Field$/) do |username|
-  @browser.text_field(:id=> 'username').set(username)
+  #@browser.text_field(:id=> 'username').set(username)
+  on(LoginPage).username = username
 end
 
 When(/^I enter the "([^"]*)" in the password Field$/) do |password|
-  @browser.text_field(:id=> 'password').set(password)
+  #@browser.text_field(:id=> 'password').set(password)
+  on(LoginPage).password = password
 end
 
 When(/^I click on login button$/) do
-  @browser.button(:text => 'Log in').click
+  #@browser.button(:text => 'Log in').click
+  on(LoginPage).login_button
   sleep 5
 end
 
