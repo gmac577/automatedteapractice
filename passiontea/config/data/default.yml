@@ -1,0 +1,17 @@
+checkout_info:
+  email: aelangovan@test.com
+  name: Anitha Elangovan
+  address: 1250 Stephenson Highway
+  cardtype: Visa
+  cardnumber: 4111111111111111
+  cardholdername: Anitha Elangovan
+  verificationcode: 123
+
+randomcheckout_info:
+  email: ~email_address
+  name: ~full_name
+  address: ~street_address
+  cardtype: ~randomize ['Visa', 'Mastercard', 'American Express', 'Diners Club']
+  cardnumber: 4111111111111111
+  cardholdername: ~full_name
+  verificationcode: 123

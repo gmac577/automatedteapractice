@@ -2,6 +2,7 @@
 Feature:  Passion Tea Checkout Feature File
 This is a feature that enters in the site into Checkout
 
+@wip
 Scenario Outline: Passion Tea Checkout Page
 Given I am in Passion Tea  Checkout Page
 When I enter "<Email>" in Email Field
@@ -17,3 +18,9 @@ Then It should successfully make the payment
 Examples:
 |Email               |Name    |Address              |Card Type  |Card Number         |CardHolder Name    |Verification Code|
 |anitha@example.com  |Anitha  |560 Sec St Eagan MN  | VISA      |511111111111111111  |Anitha Elangovan   |000              |
+
+@checkoutextended
+Scenario: Passion Tea Checkout Page
+  Given I am in Passion Tea  Checkout Page
+  When I complete the Checkout Page
+  Then It should successfully make the payment

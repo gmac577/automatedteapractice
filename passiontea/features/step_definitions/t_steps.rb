@@ -109,8 +109,8 @@ end
 
 Then(/^It should successfully make the payment$/) do
   @browser.text.include?('Menu').should == true
-  @browser.text.include?('Green Tea').should == true
-  @browser.text.include?('Red Tea').should == true
+  #@browser.text.include?('Green Tea').should == true
+  #@browser.text.include?('Red Tea').should == true
 end
 
 When(/^I click the Cancel link$/) do
@@ -141,4 +141,8 @@ Then(/^the order will be placed$/) do
   @browser.text.include?('Menu').should == true
   @browser.text.include?('Green Tea').should == true
   @browser.text.include?('Red Tea').should == true
+end
+
+When(/^I complete the Checkout Page$/) do
+  on(PassionCheckout).passion_checkout_info
 end
