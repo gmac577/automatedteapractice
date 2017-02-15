@@ -7,5 +7,5 @@ Feature: Demo School Site Login
   Scenario: School site Login Outline
     Given I enter into the school site
     When I click in Log in link
-    And I clcik on Log in as guest button
+    And I click on Log in as guest button
     Then guest access page will be displayed

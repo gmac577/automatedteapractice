@@ -27,12 +27,13 @@ Then(/^"([^"]*)" are displayed$/) do |results|
   @browser.text.include?(results).should == true
 end
 
-When(/^I clcik on Log in as guest button$/) do
+When(/^I click on Log in as guest button$/) do
   #@browser.button(:text => 'Log in as a guest').click
   on(LoginGuest).loginguest_button
   sleep 5
 end
 
 Then(/^guest access page will be displayed$/) do
-    @browser.text.include?('You are currently using guest access').should == true
+    #@browser.text.include?('You are currently using guest access').should == true
+    on(LoginGuest).login_guest_assert
 end
