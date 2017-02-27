@@ -19,7 +19,7 @@ class PassionCheckout
 
   def passion_checkout_info(data = {})
 		populate_page_with data_for(:checkout_info, data)
-		#populate_page_with data_for(:randomcheckout_info, data)
+		populate_page_with data_for(:randomcheckout_info, data)
     #self.email = 'aelangovan@test.com'
     #self.name = 'Anitha Elangovan'
     #self.address = '1250 Stephenson Highway'

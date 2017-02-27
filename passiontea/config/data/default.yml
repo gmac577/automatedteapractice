@@ -12,6 +12,6 @@ randomcheckout_info:
   name: ~full_name
   address: ~street_address
   cardtype: ~randomize ['Visa', 'Mastercard', 'American Express', 'Diners Club']
-  cardnumber: 4111111111111111
+  cardnumber: ~randomize(10000000..99999999).to_s + randomize(10000000..99999999).to_s
   cardholdername: ~full_name
-  verificationcode: 123
+  verificationcode: ~randomize(100..999)

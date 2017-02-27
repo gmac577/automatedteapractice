@@ -69,37 +69,37 @@ end
 
 Given(/^I enter "([^"]*)" in the checkout email field$/) do |id|
   #@browser.text_field(:id => 'email').set(id)
-  on(PassionCheckout).email = email
+  on(PassionCheckout).passion_checkout_info
 end
 
 Given(/^I enter "([^"]*)" in the checkout name Field$/) do |username|
   #@browser.text_field(:id => 'name').set(username)
-  on(PassionCheckout).name = name
+  on(PassionCheckout).passion_checkout_info
 end
 
 Given(/^I enter "([^"]*)" in the checkout Address Field$/) do |address|
   #@browser.textarea(:id => 'address').set(address)
-  on(PassionCheckout).address = address
+  on(PassionCheckout).passion_checkout_info
 end
 
 Given(/^I enter "([^"]*)" in the checkout Card Type Field$/) do |visa|
  #@browser.select_list(:id => "card_type").select(visa)
- on(PassionCheckout).cardtype = card_type
+ on(PassionCheckout).passion_checkout_info
 end
 
 Given(/^I enter "([^"]*)" in the checkout Card Number Field$/) do |cardnumber|
   #@browser.text_field(:id => 'card_number').set(cardnumber)
-  on(PassionCheckout).cardnumber = card_number
+  on(PassionCheckout).passion_checkout_info
 end
 
 Given(/^I enter "([^"]*)" in the checkout CardHolder Name Field$/) do |cardholdername|
   #@browser.text_field(:id => 'cardholder_name').set(cardholdername)
-  on(PassionCheckout).cardholdername = cardholder_name
+  on(PassionCheckout).passion_checkout_info
 end
 
 Given(/^I enter "([^"]*)" in the checkout Verification Code Field$/) do |verificationcode|
   #@browser.text_field(:id => 'verification_code').set(verificationcode)
-  on(PassionCheckout).verificationcode = verification_code
+  on(PassionCheckout).passion_checkout_info
 end
 
 When(/^I click the PlaceOrder button$/) do
@@ -145,4 +145,5 @@ end
 
 When(/^I complete the Checkout Page$/) do
   on(PassionCheckout).passion_checkout_info
+  on(PassionCheckout).passion_checkout_button
 end
