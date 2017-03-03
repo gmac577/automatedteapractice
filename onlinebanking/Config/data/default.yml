@@ -1,7 +1,12 @@
 banklogin_info:
   username: TEST12650
   password: TEST1234
+  institution: Symitar
 
 bankloginfails_info:
-  username: Anitha
+  username: Dummy
   password: TEST1234
+
+randombank_details:
+  username: ~full_name
+  password: ~full_name

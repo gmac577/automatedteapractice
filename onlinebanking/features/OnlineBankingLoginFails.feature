@@ -9,5 +9,6 @@ Feature: Online Banking Feature file
     Given I am on the online banking web login page
     When I enter incorrect credentials
     And I click on Sign in button
-    Then I get the Error Notification alert
+    And I get the Error Notification alert
     And I click on close button
+    Then I will be back on Sign in Page
