@@ -1,12 +1,4 @@
-banklogin_info:
-  username: TEST12650
-  password: TEST1234
-  institution: Symitar
-
-bankloginfails_info:
-  username: Dummy
-  password: TEST1234
-
-randombank_details:
-  username: ~full_name
-  password: ~full_name
+banking_transfers_info:
+  from-account: SAVINGS xxxxxxxx48 0001 (Availale Balance: $782.46)
+  to-account: CLASSIC CHECKING xxxxxxxx48 0020 (Availale Balance: $27,425.16)
+  amount: 20
