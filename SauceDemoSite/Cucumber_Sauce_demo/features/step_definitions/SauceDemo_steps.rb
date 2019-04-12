@@ -36,5 +36,27 @@ Then("the {string} will be displayed") do |results|
   @browser.text.should include results
 end
 
+Given("the user has successfully navigated to the Sauce Demo Products Page") do
+  on(LoginPage).page_url
+  on(LoginPage).login_to_app
+end
+
+When("the user adds the Sauce Labs Bolt T-Shirt to the shop cart") do
+  on(ProductsPage).selecting_t_shirt
+end
+
+Then("the shop cart will indicate that {string} item has been placed into the cart.") do |cartnumber|
+  @browser.div(:id => 'shopping_cart_container').span.text.should include cartnumber
+  #shopping_cart_container > a > span
+end
+
+And("the user decides to remove the item") do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then("the show cart will indicate that no itmes are placed in the cart") do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
 	
 

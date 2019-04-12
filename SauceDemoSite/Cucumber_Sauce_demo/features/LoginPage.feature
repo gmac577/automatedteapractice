@@ -1,13 +1,13 @@
 Feature: Navigating to the Sauce Demo login in page
   This feature file is an example of using Cucumber and Waitr
-  to do automation UI testing for a demo site
-  I want feature to validate the SwagLabs demo site login page
+  to do automation UI testing for the SwagLabas demo site
+  I want a feature to validate the SwagLabs demo site login page
 
 
 Background:
   Given the user has navigated to the Sauce Demo Login Page
 
-@wip
+
  Scenario: Navingating the the login page
  When the user enters valid credentials
  Then the user will be successfully logged in
@@ -17,7 +17,7 @@ Background:
  When the user enters a locked out user credential
  Then the locked out message will be displayed
 
-
+@wip
 Scenario Outline:
  When the user enters an "<username>" in the username field
  And the user enteres an "<password>" in the password field
@@ -29,5 +29,4 @@ Examples:
 | standard_user |              | Password is required                                        |
 |               | secret_sauce | Username is required                                        |
 | @%@$@$@       | @%@$@$@      | Username and password do not match any user in this service |
- 
  
