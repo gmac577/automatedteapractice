@@ -6,3 +6,8 @@ valid_user_info:
 locked_out_user:
   username: locked_out_user
   password: secret_sauce
+
+your_information:
+  firstname: ~first_name
+  lastname: ~last_name
+  zipcode: 48108  
