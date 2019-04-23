@@ -1,1 +1,1 @@
-default: --no-source --color --format pretty --tags 'not @wip'
+default: --no-source --color --format pretty --format html --out testresults/report.html --tags 'not @wip'

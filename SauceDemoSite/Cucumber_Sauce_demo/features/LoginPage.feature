@@ -12,12 +12,12 @@ Background:
  When the user enters valid credentials
  Then the user will be successfully logged in
 
-@wip
+
  Scenario: Invalid Login - Locked Out User
  When the user enters a locked out user credential
  Then the locked out message will be displayed
 
-@wip
+
 Scenario Outline:
  When the user enters an "<username>" in the username field
  And the user enteres an "<password>" in the password field
